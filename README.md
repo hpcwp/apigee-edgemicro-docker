@@ -1,13 +1,13 @@
 # Apigee Edge Microgateway for Docker
 
-* Run your Apigee Edge Microgateway instances in Docker containers.
+Run your Apigee Edge Microgateway instances in Docker containers.
 
 ## Build the image
 
 This step is optional.  You can pull this image directly from Docker Hub.
 
 ```
-docker build -t apigee/edgemicro:2.1.0-beta .
+docker build -t hpcwp/edgemicro:2.0.12 .
 ```
 
 ## Configure edgemicro
@@ -23,9 +23,9 @@ $ mkdir config && export EDGEMICRO_DIR=$(pwd)/config
 ### Step 2: Set environment variables related to your deployment
 
 ```
-export EDGEMICRO_ORG=ws-poc1
-export EDGEMICRO_ENV=test
-export EDGEMICRO_USER=kswiber@apigee.com
+export EDGEMICRO_ORG=hpcorp-cwp
+export EDGEMICRO_ENV=dev
+export EDGEMICRO_USER=francois-xavier.kowalski@hp.com
 ```
 
 Optionally, set `EDGEMICRO_PASS` equal to your Apigee password.
@@ -33,7 +33,7 @@ If this variable isn't set, you'll be prompted for it in the next step.
 
 ### Step 3: Generate config files
 
-This step will generate config files in the config directory 
+This step will generate config files in the config directory
 and output additional variables you can set for the next step.
 
 ```
